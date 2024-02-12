@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /// <reference types="cypress" />
 // ***********************************************
 // This example commands.ts shows you how to
@@ -35,3 +36,6 @@
 //     }
 //   }
 // }
+Cypress.Commands.add('getDataTest', (dataTestSelector, otherSelectors) => {
+  return cy.get(`[data-test="${dataTestSelector}"] ${otherSelectors ?? ''}`);
+});

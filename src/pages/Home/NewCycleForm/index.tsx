@@ -13,6 +13,7 @@ export function NewCycleForm() {
     <FormContainer>
       <label htmlFor='task'>Vou trabalhar em</label>
       <TaskInput
+        data-test='taskName'
         id='task'
         list='task-suggestions'
         placeholder='Dê um nome para o seu projeto'
@@ -27,6 +28,7 @@ export function NewCycleForm() {
         min={5}
         max={60}
         step={5}
+        data-test='minutesAmount'
         type='number'
         id='minutesAmount'
         disabled={!!activeCycle}
